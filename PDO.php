@@ -3,7 +3,7 @@
 echo "<h2> PDO demo!</h2>";
 $username = 'bl54';
 $password = '4qIHGWPk';
-$hostname = 'sql.njit.edu';
+$hostname = 'sql2.njit.edu';
  
 $dsn = "mysql:host=$hostname;dbname=$username";
 
@@ -40,3 +40,7 @@ echo '<tr>';
 
 }
 ?>
+
+/bin/bash: spell: command not found
+
+/bin/bash: spell: command not found
