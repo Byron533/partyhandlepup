@@ -15,11 +15,11 @@ try {
 }
 //connecting to the MySQL host
 
-$conn = null;
+//$conn = null;
 
 $query = 'SELECT * FROM bl54.accounts WHERE id < 6';
 //pulling info from the db=database
-$statement = $db->prepare($query);
+$statement = $conn->prepare($query);
 
 $statement->bindValue('id' , $id );
 
@@ -29,8 +29,11 @@ $products = $statement->fetchAll();
 
 $statement->closeCursor();
 
-//ECHO THE RESULTS??
+//ECHO THE RESULTS
+$count = $statement->rowCount();
+echo $count;
 
+echo '<table>';
 foreach ($products as $product)  { ;
 //the table with the actual info
 echo '<tr>';
@@ -39,8 +42,5 @@ echo '<tr>';
 '</tr>';  
 
 }
+echo '</table>';
 ?>
-
-/bin/bash: spell: command not found
-
-/bin/bash: spell: command not found
